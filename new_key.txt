@@ -1,0 +1,15 @@
+# 1. Generate the key
+ssh-keygen -t rsa -b 4096 -C "hiremaniushe@gmail.com"
+
+# 2. Start the ssh-agent
+eval "$(ssh-agent -s)"
+
+# 3. Add the private key (not .pub!)
+ssh-add ~/.ssh/id_rsa
+
+# 4. Copy the public key to a text file
+cat ~/.ssh/id_rsa.pub 
+
+copy the content
+
+copy and paste the ssh key on GITHUB/GITLAB ..
